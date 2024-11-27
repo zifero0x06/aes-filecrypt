@@ -10,10 +10,12 @@ Assurez-vous d'installer la bibliothèque ```pycryptodome``` avant d'exécuter l
 
   - ```filecrypt-auto.py``` qui génère automatiquement un vecteur d'initialisation et une clé cryptographique AES en 256 bits :
   	- ```python3 filecrypt-auto.py input.txt``` et le programme va successivement générer IV et clé puis chiffrer et déchiffrer.
+
     
   - ```filecrypt-const.py``` qui contient un vecteur d'initialisation et une clé cryptographique AES en 256 bits fixes dans le code :
   	- ```python3 filecrypt-const.py input.txt encrypted.bin --encrypt``` pour chiffrer ;
    	- ```python3 filecrypt-const.py encrypted.bin decrypted.txt --decrypt``` pour déchiffrer.
+
 
   - ```filecrypt-opt.py``` qui génère automatiquement un vecteur d'initialisation et une clé cryptographique AES en 256 bits si aucun fichier IV ou clé n'est fourni en argument :
   	- ```python3 filecrypt-opt.py input.txt encrypted.bin --key_file key.bin --iv_file iv.bin --encrypt``` pour chiffrer (*key_file* et *iv_file* sont optionnels) ;
