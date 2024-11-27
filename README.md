@@ -4,7 +4,7 @@ Chiffrement et déchiffrement d'un fichier avec le système cryptographique AES 
 Ce programme est créé à des fins de *benchmarking* et d'étude comparative. Un fichier ```input.txt``` est donné à titre d'exemple.
 
 Le document à chiffrer/déchiffrer doit être nommé *input.txt*.
-Assurez-vous d'installer la bibliothèque ```pycryptodome``` avant d'exécuter le code : ```pip install pycryptodome```
+Assurez-vous d'installer la bibliothèque ```pycryptodome``` avec la commande ```pip install pycryptodome``` avant d'exécuter le code.
 
 ## AES filecrypt existe en trois versions différentes
 
