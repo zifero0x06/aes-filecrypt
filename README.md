@@ -1,7 +1,7 @@
 # AES filecrypt
 
 Chiffrement et déchiffrement d'un fichier avec le système cryptographique AES et le mode opératoire CBC (par défaut) en langage Python.
-Ce programme est créé à des fins de *benchmarking* et d'étude comparative.
+Ce programme est créé à des fins de *benchmarking* et d'étude comparative. Un fichier ```input.txt``` est donné à titre d'exemple.
 
 Le document à chiffrer/déchiffrer doit être nommé *input.txt*.
 Assurez-vous d'installer la bibliothèque ```pycryptodome``` avant d'exécuter le code : ```pip install pycryptodome```
