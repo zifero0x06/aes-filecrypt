@@ -4,7 +4,7 @@ import os
 
 # Fixed key and IV
 FIXED_KEY = b'fixedkey1234567890123456'  # 256-bit key (32 bytes)
-FIXED_IV = b'fixediv12345678'  # 128-bit IV (16 bytes)
+FIXED_IV = b'fixediv012345678'  # 128-bit IV (16 bytes)
 
 def pad(data):
     # AES requires the data to be a multiple of 16 bytes
