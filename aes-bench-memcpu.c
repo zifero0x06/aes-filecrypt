@@ -1,6 +1,6 @@
 /****
 
-Ce programme limite son exécution à un seul coeur de processeur et à 512 Mo de mémoire. 
+Ce programme limite son exécution à un seul coeur de processeur et peut plafonner l'utilisation de la mémoire à 512 Mo mais cela empêche le traitement de gros fichiers.
 Il exécute ensuite une commande Python spécifiée en argument un certain nombre de fois (défini par NUM_RUNS) et mesure le temps d'exécution de chaque itération.
 
 Pour compiler ce programme, vous pouvez utiliser la commande suivante :
@@ -26,14 +26,14 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Set memory limit to 512 MB
-    struct rlimit rl;
-    rl.rlim_cur = MEMORY_LIMIT_MB * 1024 * 1024; // Convert MB to bytes
-    rl.rlim_max = MEMORY_LIMIT_MB * 1024 * 1024; // Convert MB to bytes
-    if (setrlimit(RLIMIT_AS, &rl) != 0) {
-        perror("setrlimit");
-        return 1;
-    }
+    // Limitation mémoire à 512 Mo
+    // struct rlimit rl;
+    // rl.rlim_cur = MEMORY_LIMIT_MB * 1024 * 1024; // Conversion en bits
+    // rl.rlim_max = MEMORY_LIMIT_MB * 1024 * 1024;
+    // if (setrlimit(RLIMIT_AS, &rl) != 0) {
+    //     perror("setrlimit");
+    //     return 1;
+    // }
 
     double times[NUM_RUNS];
     double sum = 0;
